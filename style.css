@@ -103,9 +103,11 @@ body {
   border-radius: 20px;;
   border: 2px var(--color-dark-grey) solid;
   padding: var(--spacing-l);
-  box-shadow: 10px 10px var(--color-dark-grey);
+  box-shadow: 8px 8px var(--color-dark-grey);
+  margin: auto auto;
+  margin-top: 219px;
 
-  @media screen and (max-width: 768px) {
+  @media (width < calc(700 / 16 * 1rem)) {
     width: 327px;
     height: 501px;
     padding: var(--spacing-s);
@@ -113,9 +115,21 @@ body {
   }
 }
 
+.card__image {
+  border-radius: 10px;
+}
+
+.card_wrapper {
+  padding: 0px;
+  
+}
+
+a {
+  text-decoration: none;
+}
 h1 {
   
-  font-weight: 700;
+  font-weight: 800;
   font-size: 1.5rem;
   
   color: var(--color-dark-grey);
@@ -132,28 +146,39 @@ p {
   margin-bottom: var(--spacing-l);
 }
 .publishedDate {
-
+  
   font-weight: 500;
   font-size: 0.875rem;
   
-  color: var(--color-light-grey);
+  color: var(--color-dark-grey);
   margin-top: var(--spacing-s);
   margin-bottom: var(--spacing-s);
 }
 
 .btn-category{
- 
+  display: inline-block;
   font-weight: 800;
   font-size: 0.875rem;
-
+  margin-bottom: var(--spacing-xs);
   color: var(--color-dark-grey);
   background-color: var(--color-yellow);
-  padding: var(--spacing-xs) var(--spacing-s);
+  padding: var(--spacing-xxs) var(--spacing-s);
   margin-top: var(--spacing-l);
+  cursor: pointer;
+  transition: 200ms ease-in-out;
+  transition-property: background-color, color;
+
+  &:hover {
+    color: var(--color-yellow);
+    background-color: var(--color-dark-grey);
+  }
 }
 
 .card__author {
   display:flex;
+  gap: var(--spacing-xs);
+  margin-right: var(--spacing-xs);
+  
   
 }
 
@@ -163,5 +188,20 @@ p {
   font-size: 0.875rem;
   
   color: var(--color-dark-grey);
+  margin-bottom: 0px;
+  padding-top: var(--spacing-xxs);
   
+}
+
+.author__image {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+
+}
+
+.attribution {
+margin-top: var(--spacing-l);
+text-align: center;
+
 }
